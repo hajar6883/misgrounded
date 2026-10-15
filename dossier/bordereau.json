@@ -1,0 +1,100 @@
+{
+  "dossier": "SARL ALTIMEO CONSEIL c/ SAS NOVERIA DISTRIBUTION",
+  "juridiction": "Tribunal de commerce de Lyon",
+  "partie_communicante": "NOVERIA DISTRIBUTION SAS",
+  "version": 1,
+  "date_bordereau": "2025-03-10",
+  "commentaire": "Bordereau de communication de pieces, au format observe dans l'interface d'Hector : cote, titre date, resume chiffre de 2 a 3 lignes. La cote est un rang d'affichage : elle change si une piece est inseree. Le doc_id, lui, est stable pour la vie du dossier -- c'est toute la difference que teste renumber.py. Les resumes sont GENERES par un modele a partir de la piece, puis verifies par checks.py : ils sont une surface de controle a part entiere.",
+  "pieces": [
+    {
+      "cote": 1,
+      "doc_id": "D-CTR-001",
+      "fichier": "P01_contrat_prestation.md",
+      "titre": "Contrat de prestation de services informatiques ALTIMEO CONSEIL / NOVERIA DISTRIBUTION du 02/04/2024",
+      "nature": "contrat",
+      "date_piece": "2024-04-02",
+      "resume": "Contrat de prestation de services informatiques du 2 avril 2024 entre Altimeo Conseil et Noveria Distribution pour le déploiement du progiciel AXELIS (148 000 € HT) en trois lots, avec obligation de résultat et délais de rigueur fixés entre le 28 juin 2024 et le 31 janvier 2025."
+    },
+    {
+      "cote": 2,
+      "doc_id": "D-BDC-002",
+      "fichier": "P02_bon_de_commande.md",
+      "titre": "Bon de commande NOVERIA DISTRIBUTION n° BC-2024-0187 du 14/03/2024",
+      "nature": "bon_de_commande",
+      "date_piece": "2024-03-14",
+      "resume": "Bon de commande n° BC-2024-0187 du 14 mars 2024 pour la fourniture de licences, hébergement et serveurs (projet AXELIS) par ALTIMEO CONSEIL à NOVERIA DISTRIBUTION pour un montant total de 74 880,00 € TTC, avec livraison prévue au 30 avril 2024."
+    },
+    {
+      "cote": 3,
+      "doc_id": "D-AVE-003",
+      "fichier": "P03_projet_avenant_non_signe.md",
+      "titre": "Projet d'avenant n° 1 au contrat du 02/04/2024, version 0.3 non signée, du 11/09/2024",
+      "nature": "projet_non_signe",
+      "date_piece": "2024-09-11",
+      "resume": "Projet d'avenant n° 1 au contrat du 2 avril 2024 prévoyant l'intégration du module CRM AXELIS (+32 jours-homme), portant le prix de 148 000 € à 166 400 € HT et reportant la livraison du lot 2 au 29 novembre 2024."
+    },
+    {
+      "cote": 4,
+      "doc_id": "D-FAC-004",
+      "fichier": "P04_facture_F2024_0412.md",
+      "titre": "Facture ALTIMEO CONSEIL n° F-2024-0412 du 30/06/2024 — lot 1",
+      "nature": "facture",
+      "date_piece": "2024-06-30",
+      "resume": "Facture n° F-2024-0412 du 30 juin 2024 émise par ALTIMEO CONSEIL à NOVERIA DISTRIBUTION pour 53 280,00 € TTC (44 400,00 € HT), relative au lot 1 du contrat du 2 avril 2024, exigible le 30 juillet 2024."
+    },
+    {
+      "cote": 5,
+      "doc_id": "D-PVR-005",
+      "fichier": "P05_pv_recette_reserves.md",
+      "titre": "Procès-verbal de recette du lot 2 du 18/10/2024, avec réserves",
+      "nature": "proces_verbal",
+      "date_piece": "2024-10-18",
+      "resume": "Procès-verbal de recette du 18 octobre 2024 (Lyon) relatif au lot 2 du projet AXELIS : constatation de 12 réserves, dont 4 bloquantes (R-01 à R-04), suspendant la recette conformément à l'article 9 du contrat du 2 avril 2024. Délai de levée fixé au 12 novembre 2024."
+    },
+    {
+      "cote": 6,
+      "doc_id": "D-FAC-006",
+      "fichier": "P06_facture_F2024_0731.md",
+      "titre": "Facture ALTIMEO CONSEIL n° F-2024-0731 du 21/11/2024 — lot 2",
+      "nature": "facture",
+      "date_piece": "2024-11-21",
+      "resume": "Facture n° F-2024-0731 du 21 novembre 2024 émise par Altimeo Conseil à Noveria Distribution pour 71 040,00 € TTC (59 200,00 € HT), relative au lot 2 du contrat de prestation du 2 avril 2024."
+    },
+    {
+      "cote": 7,
+      "doc_id": "D-MEL-007",
+      "fichier": "P07_fil_courriels.md",
+      "titre": "Fil de six courriels ALTIMEO CONSEIL / NOVERIA DISTRIBUTION du 27/06/2024 au 08/11/2024",
+      "nature": "correspondance",
+      "date_piece": "2024-11-08",
+      "resume": "Échanges relatifs au projet AXELIS (27/06/2024-08/11/2024) : validation du lot 1 (44 400 € HT), refus par NOVERIA de l'avenant n° 1 (18 400 € HT) et du report d'échéance du lot 2, et état des réserves bloquantes R-02 et R-04 au 08/11/2024."
+    },
+    {
+      "cote": 8,
+      "doc_id": "D-CTS-008",
+      "fichier": "P08_courrier_contestation.md",
+      "titre": "Courrier de contestation NOVERIA DISTRIBUTION / ALTIMEO CONSEIL du 09/12/2024",
+      "nature": "courrier",
+      "date_piece": "2024-12-09",
+      "resume": "Contestation de la facture n° F-2024-0731 (59 200 € HT) émise par Altimeo Conseil le 21/11/2024 : non-respect de l'article 6 (recette non acquise, réserves R-02 et R-04 non levées) et application des pénalités de retard (2 368 € au 09/12/2024) selon l'article 8."
+    },
+    {
+      "cote": 9,
+      "doc_id": "D-MED-009",
+      "fichier": "P09_mise_en_demeure.md",
+      "titre": "Mise en demeure ALTIMEO CONSEIL / NOVERIA DISTRIBUTION du 27/01/2025 et relance du 14/02/2025",
+      "nature": "mise_en_demeure",
+      "date_piece": "2025-01-27",
+      "resume": "Mise en demeure du 27 janvier 2025 et relance du 14 février 2025 concernant l'impayé de la facture n° F-2024-0731 (71 040 € TTC) du 21 novembre 2024, avec demande de paiement total de 71 080 € incluant l'indemnité de recouvrement."
+    },
+    {
+      "cote": 10,
+      "doc_id": "D-KBI-010",
+      "fichier": "P10_extrait_kbis_altimeo.md",
+      "titre": "Extrait Kbis ALTIMEO CONSEIL délivré le 03/03/2025",
+      "nature": "extrait_registre",
+      "date_piece": "2025-03-03",
+      "resume": "Extrait Kbis de la SARL ALTIMEO CONSEIL (SIREN 891 204 331), siège social au 14 rue Frédéric Mistral, 69100 Villeurbanne, capital social de 25 000 euros, gérée par M. Samuel FERRAND."
+    }
+  ]
+}

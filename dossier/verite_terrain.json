@@ -1,0 +1,75 @@
+{
+  "commentaire": "Verite terrain du dossier fictif. Chaque fait est rattache au doc_id de la SEULE piece qui l'etablit. Le champ extrait doit apparaitre mot pour mot dans le fichier correspondant : c'est verifie par tests/test_verite_terrain.py. La comparaison ignore le gras markdown et les variantes d'espace.",
+  "types": {
+    "date": "valeur au format ISO AAAA-MM-JJ",
+    "montant": "valeur decimale en euros, sans separateur de milliers",
+    "partie": "denomination, identifiant ou qualite d'une personne",
+    "evenement": "fait, clause ou etat non reductible a un nombre"
+  },
+  "faits": [
+    {"fact_id": "F-001", "doc_id": "D-CTR-001", "type": "montant", "valeur": "148000.00", "libelle": "Prix forfaitaire du contrat, HT", "extrait": "cent quarante-huit mille euros hors taxes (148 000 € HT)"},
+    {"fact_id": "F-002", "doc_id": "D-CTR-001", "type": "montant", "valeur": "177600.00", "libelle": "Prix forfaitaire du contrat, TTC", "extrait": "cent soixante-dix-sept mille six cents euros toutes taxes comprises (177 600 € TTC)"},
+    {"fact_id": "F-003", "doc_id": "D-CTR-001", "type": "date", "valeur": "2024-04-02", "libelle": "Date de signature du contrat", "extrait": "Fait à Lyon, le 2 avril 2024"},
+    {"fact_id": "F-004", "doc_id": "D-CTR-001", "type": "montant", "valeur": "44400.00", "libelle": "Montant HT du lot 1", "extrait": "| Lot 1 | Cadrage fonctionnel et reprise des données | 44 400 euros |"},
+    {"fact_id": "F-005", "doc_id": "D-CTR-001", "type": "montant", "valeur": "59200.00", "libelle": "Montant HT du lot 2", "extrait": "| Lot 2 | Déploiement des modules gestion commerciale et stocks | 59 200 euros |"},
+    {"fact_id": "F-006", "doc_id": "D-CTR-001", "type": "montant", "valeur": "44400.00", "libelle": "Montant HT du lot 3", "extrait": "| Lot 3 | Déploiement du module qualité et dispositif de réversibilité | 44 400 euros |"},
+    {"fact_id": "F-007", "doc_id": "D-CTR-001", "type": "date", "valeur": "2024-06-28", "libelle": "Date de livraison contractuelle du lot 1", "extrait": "Lot 1 : le 28 juin 2024"},
+    {"fact_id": "F-008", "doc_id": "D-CTR-001", "type": "date", "valeur": "2024-10-18", "libelle": "Date de livraison contractuelle du lot 2", "extrait": "Lot 2 : le 18 octobre 2024"},
+    {"fact_id": "F-009", "doc_id": "D-CTR-001", "type": "date", "valeur": "2025-01-31", "libelle": "Date de livraison contractuelle du lot 3", "extrait": "Lot 3 : le 31 janvier 2025"},
+    {"fact_id": "F-010", "doc_id": "D-CTR-001", "type": "evenement", "valeur": "penalite de 0,5 % du montant HT du lot par semaine calendaire entamee", "libelle": "Taux de la clause penale (article 8)", "extrait": "0,5 % du montant hors taxes du lot concerné par semaine calendaire entamée de retard"},
+    {"fact_id": "F-011", "doc_id": "D-CTR-001", "type": "evenement", "valeur": "penalites plafonnees a 10 % du montant HT du lot", "libelle": "Plafond de la clause penale (article 8)", "extrait": "ne peut excéder 10 % du montant hors taxes de ce lot"},
+    {"fact_id": "F-012", "doc_id": "D-CTR-001", "type": "evenement", "valeur": "toute modification du perimetre exige un avenant ecrit signe des deux parties", "libelle": "Formalisme de l'avenant (article 12)", "extrait": "doit faire l'objet d'un avenant écrit, signé des deux Parties"},
+    {"fact_id": "F-013", "doc_id": "D-CTR-001", "type": "evenement", "valeur": "les courriels ne valent pas avenant", "libelle": "Exclusion des courriels (article 12)", "extrait": "comptes rendus de comité de pilotage ou accords verbaux ne valent pas avenant"},
+    {"fact_id": "F-014", "doc_id": "D-CTR-001", "type": "evenement", "valeur": "une reserve bloquante suspend la recette du lot", "libelle": "Effet des reserves bloquantes (article 9)", "extrait": "au moins une réserve bloquante suspend la recette du lot, qui n'est réputée acquise"},
+    {"fact_id": "F-015", "doc_id": "D-CTR-001", "type": "evenement", "valeur": "quinze jours ouvres pour lever les reserves bloquantes", "libelle": "Delai de levee des reserves (article 9)", "extrait": "jours ouvrés à compter de la signature du procès-verbal pour lever les réserves bloquantes"},
+    {"fact_id": "F-016", "doc_id": "D-CTR-001", "type": "partie", "valeur": "Tribunal de commerce de Lyon", "libelle": "Juridiction competente (article 16)", "extrait": "compétence exclusive du Tribunal de commerce de Lyon"},
+
+    {"fact_id": "F-017", "doc_id": "D-BDC-002", "type": "date", "valeur": "2024-03-14", "libelle": "Date du bon de commande", "extrait": "Date de commande : 14 mars 2024"},
+    {"fact_id": "F-018", "doc_id": "D-BDC-002", "type": "montant", "valeur": "62400.00", "libelle": "Montant HT du bon de commande licences et infrastructure", "extrait": "| Total HT | 62 400,00 € |"},
+    {"fact_id": "F-019", "doc_id": "D-BDC-002", "type": "montant", "valeur": "74880.00", "libelle": "Montant TTC du bon de commande", "extrait": "| Total TTC | 74 880,00 € |"},
+    {"fact_id": "F-020", "doc_id": "D-BDC-002", "type": "partie", "valeur": "Julien BRESSAND, responsable des systemes d'information de NOVERIA", "libelle": "Interlocuteur NOVERIA sur la commande", "extrait": "Interlocuteur NOVERIA : M. Julien BRESSAND, responsable des systèmes d'information"},
+
+    {"fact_id": "F-021", "doc_id": "D-AVE-003", "type": "date", "valeur": "2024-09-11", "libelle": "Date de transmission du projet d'avenant", "extrait": "projet transmis à NOVERIA le 11 septembre 2024"},
+    {"fact_id": "F-022", "doc_id": "D-AVE-003", "type": "montant", "valeur": "18400.00", "libelle": "Cout HT du module CRM propose a l'avenant", "extrait": "une augmentation de 18 400 euros HT"},
+    {"fact_id": "F-023", "doc_id": "D-AVE-003", "type": "date", "valeur": "2024-11-29", "libelle": "Date de livraison du lot 2 que l'avenant proposait", "extrait": "reportée du 18 octobre 2024 au 29 novembre 2024"},
+    {"fact_id": "F-024", "doc_id": "D-AVE-003", "type": "evenement", "valeur": "l'avenant n'a jamais ete signe", "libelle": "Absence de signature de l'avenant", "extrait": "Sans retour signé à ce jour"},
+
+    {"fact_id": "F-025", "doc_id": "D-FAC-004", "type": "date", "valeur": "2024-06-30", "libelle": "Date d'emission de la facture du lot 1", "extrait": "| Date d'émission | 30 juin 2024 |"},
+    {"fact_id": "F-026", "doc_id": "D-FAC-004", "type": "montant", "valeur": "44400.00", "libelle": "Montant HT de la facture F-2024-0412", "extrait": "| Total HT | 44 400,00 € |"},
+    {"fact_id": "F-027", "doc_id": "D-FAC-004", "type": "montant", "valeur": "53280.00", "libelle": "Montant TTC de la facture F-2024-0412", "extrait": "| Net à payer TTC | 53 280,00 € |"},
+    {"fact_id": "F-028", "doc_id": "D-FAC-004", "type": "date", "valeur": "2024-06-27", "libelle": "Date de signature du PV de recette du lot 1", "extrait": "Procès-verbal de recette du lot 1, signé le 27 juin 2024, sans réserve"},
+
+    {"fact_id": "F-029", "doc_id": "D-PVR-005", "type": "date", "valeur": "2024-10-18", "libelle": "Date du proces-verbal de recette du lot 2", "extrait": "| Date du présent procès-verbal | 18 octobre 2024 |"},
+    {"fact_id": "F-030", "doc_id": "D-PVR-005", "type": "evenement", "valeur": "douze reserves consignees au proces-verbal", "libelle": "Nombre total de reserves", "extrait": "consignent douze (12) réserves"},
+    {"fact_id": "F-031", "doc_id": "D-PVR-005", "type": "evenement", "valeur": "quatre reserves qualifiees de bloquantes", "libelle": "Nombre de reserves bloquantes", "extrait": "dont quatre (4) qualifiées de bloquantes"},
+    {"fact_id": "F-032", "doc_id": "D-PVR-005", "type": "date", "valeur": "2024-11-12", "libelle": "Date limite de levee des reserves bloquantes", "extrait": "au plus tard le 12 novembre 2024"},
+    {"fact_id": "F-033", "doc_id": "D-PVR-005", "type": "evenement", "valeur": "136 cas de test conformes sur 148", "libelle": "Resultat des tests de recette", "extrait": "| Conformes | 136 |"},
+
+    {"fact_id": "F-034", "doc_id": "D-FAC-006", "type": "date", "valeur": "2024-11-21", "libelle": "Date d'emission de la facture du lot 2", "extrait": "| Date d'émission | 21 novembre 2024 |"},
+    {"fact_id": "F-035", "doc_id": "D-FAC-006", "type": "montant", "valeur": "59200.00", "libelle": "Montant HT de la facture F-2024-0731", "extrait": "| Total HT | 59 200,00 € |"},
+    {"fact_id": "F-036", "doc_id": "D-FAC-006", "type": "montant", "valeur": "71040.00", "libelle": "Montant TTC de la facture F-2024-0731", "extrait": "| Net à payer TTC | 71 040,00 € |"},
+    {"fact_id": "F-037", "doc_id": "D-FAC-006", "type": "date", "valeur": "2024-12-21", "libelle": "Date d'echeance de la facture F-2024-0731", "extrait": "| Date d'échéance | 21 décembre 2024 |"},
+
+    {"fact_id": "F-038", "doc_id": "D-MEL-007", "type": "date", "valeur": "2024-07-24", "libelle": "Date de reglement de la facture F-2024-0412 par NOVERIA", "extrait": "exécuté ce matin, 24 juillet 2024, le virement de la facture F-2024-0412"},
+    {"fact_id": "F-039", "doc_id": "D-MEL-007", "type": "evenement", "valeur": "NOVERIA a refuse le projet d'avenant n° 1", "libelle": "Refus de l'avenant par NOVERIA", "extrait": "Nous n'y donnerons pas suite."},
+    {"fact_id": "F-040", "doc_id": "D-MEL-007", "type": "date", "valeur": "2024-09-20", "libelle": "Date du refus de l'avenant", "extrait": "Date : vendredi 20 septembre 2024"},
+    {"fact_id": "F-041", "doc_id": "D-MEL-007", "type": "evenement", "valeur": "les reserves R-02 et R-04 demeurent non levees", "libelle": "Aveu du prestataire sur les reserves restantes", "extrait": "les réserves bloquantes R-02 (décrémentation des stocks sur livraison partielle) et R-04 (historique des tarifs négociés)"},
+    {"fact_id": "F-042", "doc_id": "D-MEL-007", "type": "evenement", "valeur": "le module CRM n'etait qu'une etude d'opportunite hors perimetre", "libelle": "Qualification du module CRM par NOVERIA", "extrait": "ce sujet ne fait pas partie du périmètre contractuel"},
+
+    {"fact_id": "F-043", "doc_id": "D-CTS-008", "type": "date", "valeur": "2024-12-09", "libelle": "Date du courrier de contestation", "extrait": "Lyon, le 9 décembre 2024"},
+    {"fact_id": "F-044", "doc_id": "D-CTS-008", "type": "montant", "valeur": "2368.00", "libelle": "Penalites de retard calculees au 9 decembre 2024", "extrait": "| Pénalités dues à ce jour | 2 368,00 € |"},
+    {"fact_id": "F-045", "doc_id": "D-CTS-008", "type": "montant", "valeur": "296.00", "libelle": "Penalite hebdomadaire appliquee au lot 2", "extrait": "| Pénalité hebdomadaire (0,5 %) | 296,00 € |"},
+    {"fact_id": "F-046", "doc_id": "D-CTS-008", "type": "evenement", "valeur": "retard de 52 jours, soit 8 semaines entamees", "libelle": "Decompte du retard au 9 decembre 2024", "extrait": "52 jours, soit 8 semaines entamées"},
+
+    {"fact_id": "F-047", "doc_id": "D-MED-009", "type": "date", "valeur": "2025-01-27", "libelle": "Date de la mise en demeure", "extrait": "Villeurbanne, le 27 janvier 2025"},
+    {"fact_id": "F-048", "doc_id": "D-MED-009", "type": "montant", "valeur": "71080.00", "libelle": "Total reclame par ALTIMEO", "extrait": "| Total réclamé | 71 080,00 € |"},
+    {"fact_id": "F-049", "doc_id": "D-MED-009", "type": "date", "valeur": "2025-02-14", "libelle": "Date de la relance", "extrait": "Villeurbanne, le 14 février 2025"},
+    {"fact_id": "F-050", "doc_id": "D-MED-009", "type": "evenement", "valeur": "ALTIMEO annonce saisir le Tribunal de commerce de Lyon", "libelle": "Annonce de l'assignation", "extrait": "aux fins d'assignation devant le Tribunal de commerce de Lyon"},
+
+    {"fact_id": "F-051", "doc_id": "D-KBI-010", "type": "partie", "valeur": "891 204 331", "libelle": "SIREN d'ALTIMEO CONSEIL", "extrait": "| Numéro d'identification (SIREN) | 891 204 331 |"},
+    {"fact_id": "F-052", "doc_id": "D-KBI-010", "type": "montant", "valeur": "25000.00", "libelle": "Capital social d'ALTIMEO CONSEIL", "extrait": "| Capital social | 25 000,00 euros |"},
+    {"fact_id": "F-053", "doc_id": "D-KBI-010", "type": "partie", "valeur": "Samuel Pierre FERRAND, gerant", "libelle": "Identite du gerant d'ALTIMEO", "extrait": "| Nom, prénoms | FERRAND Samuel, Pierre |"},
+    {"fact_id": "F-054", "doc_id": "D-KBI-010", "type": "date", "valeur": "2020-11-02", "libelle": "Date d'immatriculation d'ALTIMEO au RCS", "extrait": "| Date d'immatriculation au RCS | 2 novembre 2020 |"},
+    {"fact_id": "F-055", "doc_id": "D-KBI-010", "type": "evenement", "valeur": "aucune procedure collective en cours", "libelle": "Absence de procedure collective", "extrait": "ne comporte aucune mention de procédure collective en cours"}
+  ]
+}

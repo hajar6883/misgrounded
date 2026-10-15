@@ -1,0 +1,818 @@
+{
+  "acte": "conclusions_llm.md",
+  "modele_juge": "gemini-3.5-flash-lite",
+  "synthese": {
+    "affirmations": 32,
+    "classements": {
+      "correctement_cite": 30,
+      "misgrounded": 2
+    },
+    "taux_misgrounded": 0.0625,
+    "taux_non_etaye": 0.0,
+    "etaye_passe_A": 32,
+    "etaye_passe_B": 30,
+    "citations_du_juge_verifiees": 0.8226
+  },
+  "comparaisons": [
+    {
+      "claim_id": "C-001",
+      "cote_citee": 1,
+      "texte": "Le 2 avril 2024, la société NOVERIA DISTRIBUTION a conclu avec la société ALTIMEO CONSEIL un contrat de prestation de services informatiques ayant pour objet le déploiement du progiciel de gestion intégré AXELIS",
+      "valeur_brute": "2 avril 2024",
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-001",
+        "cote_citee": 1,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "Contrat de prestation de services informatiques ALTIMEO CONSEIL / NOVERIA DISTRIBUTION du 02/04/2024",
+        "explication": "Le contrat conclu entre Noveria Distribution et Altimeo Conseil pour le déploiement d'Axelis est bien daté du 2 avril 2024.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-001",
+        "cote_citee": 1,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "Fait à Lyon, le 2 avril 2024, en deux exemplaires originaux.",
+        "explication": "Le contrat a bien été conclu le 2 avril 2024 entre les sociétés ALTIMEO CONSEIL et NOVERIA DISTRIBUTION.",
+        "citation_verifiee": true
+      }
+    },
+    {
+      "claim_id": "C-002",
+      "cote_citee": 1,
+      "texte": "Ce contrat, conclu à prix forfaitaire de 148 000 € HT, impose au prestataire une obligation de résultat",
+      "valeur_brute": "148 000 € HT",
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-002",
+        "cote_citee": 1,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "Le prix forfaitaire, ferme et non révisable, des prestations est fixé à cent quarante-huit mille euros hors taxes (148 000 € HT)",
+        "explication": "Le contexte confirme que le contrat a été conclu pour un montant forfaitaire de 148 000 € HT et qu'il impose une obligation de résultat au prestataire.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-002",
+        "cote_citee": 1,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "Le présent contrat a pour objet de définir les conditions dans lesquelles le Prestataire assure, pour le compte du Client, le paramétrage, le déploiement et la mise en service du progiciel de gestion intégré AXELIS, ainsi que la reprise des données de l'application existante. Les prestations sont réalisées à prix forfaitaire. Le Prestataire est tenu d'une obligation de résultat : il s'engage à livrer un système conforme au cahier des charges annexé aux présentes (Annexe 1), dans les délais stipulés à l'article 4. [...] Le prix forfaitaire, ferme et non révisable, des prestations est fixé à cent quarante-huit mille euros hors taxes (148 000 € HT)",
+        "explication": "Le contrat confirme que les prestations sont forfaitaires pour un montant de 148 000 € HT et que le prestataire est soumis à une obligation de résultat.",
+        "citation_verifiee": false
+      }
+    },
+    {
+      "claim_id": "C-003",
+      "cote_citee": 1,
+      "texte": "Le calendrier contractuel prévoyait trois lots successifs, avec des dates de livraison qualifiées de « délais de rigueur »",
+      "valeur_brute": "trois",
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-003",
+        "cote_citee": 1,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "Les prestations sont décomposées en trois (3) lots successifs",
+        "explication": "Le contrat prévoit explicitement trois lots successifs dont les dates de livraison sont qualifiées de délais de rigueur.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-003",
+        "cote_citee": 1,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "Les prestations sont décomposées en trois (3) lots successifs :\n\n| Lot | Contenu | Montant HT |\n|---|---|---|\n| Lot 1 | Cadrage fonctionnel et reprise des données | 44 400 euros |\n| Lot 2 | Déploiement des modules gestion commerciale et stocks | 59 200 euros |\n| Lot 3 | Déploiement du module qualité et dispositif de réversibilité | 44 400 euros |\n\nChaque lot fait l'objet d'une recette distincte dans les conditions de l'article 9.\n\n## ARTICLE 4 — DÉLAIS DE LIVRAISON\n\nLe Prestataire s'engage à livrer chaque lot au plus tard aux dates suivantes :\n\n- **Lot 1** : le 28 juin 2024\n- **Lot 2** : le 18 octobre 2024\n- **Lot 3** : le 31 janvier 2025\n\nCes dates sont des **délais de rigueur**.",
+        "explication": "Le contrat prévoit expressément trois lots successifs et qualifie les dates de livraison de délais de rigueur.",
+        "citation_verifiee": true
+      }
+    },
+    {
+      "claim_id": "C-004",
+      "cote_citee": 7,
+      "texte": "Le lot 1 a été livré et réceptionné sans réserve le 27 juin 2024",
+      "valeur_brute": "27 juin 2024",
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-004",
+        "cote_citee": 7,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "Je te confirme que nous avons signé ce jour, le 27 juin 2024, le procès-verbal de recette du lot 1, sans aucune réserve.",
+        "explication": "Le contexte confirme par courriel que le procès-verbal de recette du lot 1 a bien été signé le 27 juin 2024 sans aucune réserve.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-004",
+        "cote_citee": 7,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "Je te confirme que nous avons signé ce jour, le 27 juin 2024, le procès-verbal de recette du lot 1, sans aucune réserve.",
+        "explication": "Le message 1 du fil de courriels confirme explicitement que le procès-verbal de recette du lot 1 a été signé le 27 juin 2024 sans aucune réserve.",
+        "citation_verifiee": true
+      }
+    },
+    {
+      "claim_id": "C-005",
+      "cote_citee": 4,
+      "texte": "donnant lieu à une facturation de 44 400 € HT, intégralement réglée par NOVERIA DISTRIBUTION",
+      "valeur_brute": "44 400 € HT",
+      "classement": "misgrounded",
+      "passe_A": {
+        "claim_id": "C-005",
+        "cote_citee": 4,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "Notre service comptable a exécuté ce matin, 24 juillet 2024, le virement de la facture F-2024-0412, d'un montant de 53 280 euros TTC, avec six jours d'avance sur l'échéance du 30 juillet.",
+        "explication": "Le contexte confirme que le montant de 44 400 euros HT (correspondant au lot 1) a été facturé et intégralement réglé par Noveria Distribution.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-005",
+        "cote_citee": 4,
+        "passe": "B",
+        "verdict": "absent",
+        "citation_justificative": "",
+        "explication": "Le document indique le montant de la facture mais ne mentionne pas si celle-ci a été intégralement réglée.",
+        "citation_verifiee": false
+      }
+    },
+    {
+      "claim_id": "C-006",
+      "cote_citee": 1,
+      "texte": "Le lot 2, relatif au déploiement des modules de gestion commerciale et de stocks, devait être livré au plus tard le 18 octobre 2024",
+      "valeur_brute": "18 octobre 2024",
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-006",
+        "cote_citee": 1,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "Lot 2 | Déploiement des modules gestion commerciale et stocks | le 18 octobre 2024",
+        "explication": "Le contexte confirme que le lot 2 devait être livré au plus tard le 18 octobre 2024.",
+        "citation_verifiee": false
+      },
+      "passe_B": {
+        "claim_id": "C-006",
+        "cote_citee": 1,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "- Lot 2 : le 18 octobre 2024",
+        "explication": "Le contrat stipule explicitement que la date limite de livraison pour le lot 2 est fixée au 18 octobre 2024.",
+        "citation_verifiee": true
+      }
+    },
+    {
+      "claim_id": "C-007",
+      "cote_citee": 5,
+      "texte": "À cette date, les opérations de recette ont révélé douze réserves, dont quatre qualifiées de « bloquantes » au sens de l’article 9 du contrat, empêchant l’exploitation normale du système",
+      "valeur_brute": "douze",
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-007",
+        "cote_citee": 5,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "Les Parties consignent douze (12) réserves, dont quatre (4) qualifiées de bloquantes au sens de l'article 9 du contrat.",
+        "explication": "Le contexte confirme bien que douze réserves ont été consignées lors de la recette, dont quatre bloquantes.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-007",
+        "cote_citee": 5,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "Les Parties consignent douze (12) réserves, dont quatre (4) qualifiées de bloquantes au sens de l'article 9 du contrat.",
+        "explication": "Le contexte confirme qu'il y a exactement douze réserves dont quatre sont bloquantes.",
+        "citation_verifiee": true
+      }
+    },
+    {
+      "claim_id": "C-008",
+      "cote_citee": 5,
+      "texte": "À cette date, les opérations de recette ont révélé douze réserves, dont quatre qualifiées de « bloquantes » au sens de l’article 9 du contrat, empêchant l’exploitation normale du système",
+      "valeur_brute": "quatre",
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-008",
+        "cote_citee": 5,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "Les Parties consignent douze (12) réserves, dont quatre (4) qualifiées de bloquantes au sens de l'article 9 du contrat.",
+        "explication": "Le contexte confirme que les opérations de recette ont mis en évidence douze réserves, dont quatre ont été qualifiées de bloquantes par les parties.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-008",
+        "cote_citee": 5,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "Les Parties consignent douze (12) réserves, dont quatre (4) qualifiées de bloquantes au sens de l'article 9 du contrat.",
+        "explication": "Le procès-verbal confirme explicitement la présence de douze réserves dont quatre bloquantes.",
+        "citation_verifiee": true
+      }
+    },
+    {
+      "claim_id": "C-009",
+      "cote_citee": 6,
+      "texte": "Nonobstant la suspension de la recette, la société ALTIMEO CONSEIL a émis, le 21 novembre 2024, une facture n° F-2024-0731 d’un montant de 59 200 € HT",
+      "valeur_brute": "59 200 € HT",
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-009",
+        "cote_citee": 6,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "FACTURE N° F-2024-0731\n\nALTIMEO CONSEIL SARL\n14 rue Frédéric Mistral — 69100 Villeurbanne\nRCS Lyon 891 204 331 — SIRET 891 204 331 00013\nTVA intracommunautaire : FR 65 891 204 331\nCode APE 6202A\n\n---\n\nFacturé à\nNOVERIA DISTRIBUTION SAS\n8 quai Rambaud — 69002 Lyon\nRCS Lyon 512 887 043\nTVA intracommunautaire : FR 96 512 887 043\n\n|  |  |\n|---|---|\n| **Date d'émission** | 21 novembre 2024 |\n| **Numéro de facture** | F-2024-0731 |\n| **Référence contrat** | Contrat de prestation du 2 avril 2024 |\n| **Date d'échéance** | 21 décembre 2024 |\n\n---\n\n## Détail des prestations\n\n| Désignation | Montant HT |\n|---|---|\n| **Lot 2 — Déploiement des modules gestion commerciale et stocks** | |\n| Paramétrage du module gestion commerciale | 28 400,00 € |\n| Paramétrage du module stocks et logistique | 22 800,00 € |\n| Recette du lot et accompagnement au démarrage | 8 000,00 € |\n\n|  |  |\n|---|---|\n| **Total HT** | **59 200,00 €** |",
+        "explication": "Le contexte confirme l'émission de la facture n° F-2024-0731 le 21 novembre 2024 pour un montant total hors taxes de 59 200 €.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-009",
+        "cote_citee": 6,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "Date d'émission | 21 novembre 2024\nNuméro de facture | F-2024-0731\nRéférence contrat | Contrat de prestation du 2 avril 2024\nDate d'échéance | 21 décembre 2024\n\n---\n\n## Détail des prestations\n\n| Désignation | Montant HT |\n|---|---|\n| **Lot 2 — Déploiement des modules gestion commerciale et stocks** | |\n| Paramétrage du module gestion commerciale | 28 400,00 € |\n| Paramétrage du module stocks et logistique | 22 800,00 € |\n| Recette du lot et accompagnement au démarrage | 8 000,00 € |\n\n|  |  |\n|---|---|\n| **Total HT** | **59 200,00 €** |",
+        "explication": "Le contexte confirme l'émission de la facture le 21 novembre 2024 pour un montant total hors taxe de 59 200,00 €.",
+        "citation_verifiee": false
+      }
+    },
+    {
+      "claim_id": "C-010",
+      "cote_citee": 6,
+      "texte": "Nonobstant la suspension de la recette, la société ALTIMEO CONSEIL a émis, le 21 novembre 2024, une facture n° F-2024-0731 d’un montant de 59 200 € HT",
+      "valeur_brute": "21 novembre 2024",
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-010",
+        "cote_citee": 6,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "FACTURE N° F-2024-0731\n\nALTIMEO CONSEIL SARL\n14 rue Frédéric Mistral — 69100 Villeurbanne\nRCS Lyon 891 204 331 — SIRET 891 204 331 00013\nTVA intracommunautaire : FR 65 891 204 331\nCode APE 6202A\n\n---\n\nFacturé à\nNOVERIA DISTRIBUTION SAS\n8 quai Rambaud — 69002 Lyon\nRCS Lyon 512 887 043\nTVA intracommunautaire : FR 96 512 887 043\n\n|\t|\t|\n|---|---|\n| **Date d'émission** | 21 novembre 2024 |\n| **Numéro de facture** | F-2024-0731 |\n| **Référence contrat** | Contrat de prestation du 2 avril 2024 |\n| **Date d'échéance** | 21 décembre 2024 |\n\n---\n\n## Détail des prestations\n\n| Désignation | Montant HT |\n|---|---|\n| **Lot 2 — Déploiement des modules gestion commerciale et stocks** | |\n| Paramétrage du module gestion commerciale | 28 400,00 € |\n| Paramétrage du module stocks et logistique | 22 800,00 € |\n| Recette du lot et accompagnement au démarrage | 8 000,00 € |\n\n|\t|\t|\n|---|---|\n| **Total HT** | **59 200,00 €** |",
+        "explication": "Le contexte confirme que la facture numéro F-2024-0731 a bien été émise le 21 novembre 2024 pour un montant hors taxes de 59 200 euros.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-010",
+        "cote_citee": 6,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "Date d'émission : 21 novembre 2024\nNuméro de facture : F-2024-0731\nTotal HT : 59 200,00 €",
+        "explication": "Le contexte confirme la date d'émission, le numéro et le montant hors taxe de la facture.",
+        "citation_verifiee": false
+      }
+    },
+    {
+      "claim_id": "C-011",
+      "cote_citee": 7,
+      "texte": "À ce jour, deux réserves bloquantes (R-02 et R-04) n’ont toujours pas été levées, comme l’a reconnu le chef de projet d’ALTIMEO CONSEIL dans un courriel du 8 novembre 2024",
+      "valeur_brute": "8 novembre 2024",
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-011",
+        "cote_citee": 7,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "Non levées : les réserves bloquantes R-02 (décrémentation des stocks sur livraison partielle) et R-04 (historique des tarifs négociés).",
+        "explication": "Le courriel du chef de projet du 8 novembre 2024 confirme explicitement que les réserves bloquantes R-02 et R-04 n'ont pas été levées.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-011",
+        "cote_citee": 7,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "Non levées : les réserves bloquantes R-02 (décrémentation des stocks sur livraison partielle) et R-04 (historique des tarifs négociés).",
+        "explication": "Le courriel du 8 novembre 2024 émanant du chef de projet d'Altimeo Conseil confirme explicitement que les réserves bloquantes R-02 et R-04 n'ont pas été levées.",
+        "citation_verifiee": true
+      }
+    },
+    {
+      "claim_id": "C-012",
+      "cote_citee": 7,
+      "texte": "À ce jour, deux réserves bloquantes (R-02 et R-04) n’ont toujours pas été levées, comme l’a reconnu le chef de projet d’ALTIMEO CONSEIL dans un courriel du 8 novembre 2024",
+      "valeur_brute": "deux",
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-012",
+        "cote_citee": 7,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "Non levées : les réserves bloquantes R-02 (décrémentation des stocks sur livraison partielle) et R-04 (historique des tarifs négociés).",
+        "explication": "Le courriel du 8 novembre 2024 du chef de projet d'Altimeo Conseil confirme bien que les réserves R-02 et R-04 n'ont pas été levées.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-012",
+        "cote_citee": 7,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "Non levées : les réserves bloquantes R-02 (décrémentation des stocks sur livraison partielle) et R-04 (historique des tarifs négociés).",
+        "explication": "Le courriel du 8 novembre 2024 émanant du chef de projet d'Altimeo Conseil confirme explicitement que les réserves bloquantes R-02 et R-04 n'ont pas été levées.",
+        "citation_verifiee": true
+      }
+    },
+    {
+      "claim_id": "C-013",
+      "cote_citee": 9,
+      "texte": "Face à cette situation, la société ALTIMEO CONSEIL a cru devoir adresser une mise en demeure de payer le 27 janvier 2025, puis une relance le 14 février 2025",
+      "valeur_brute": "27 janvier 2025",
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-013",
+        "cote_citee": 9,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "MISE EN DEMEURE ET RELANCE\n\nLa présente pièce regroupe deux courriers successifs adressés par ALTIMEO CONSEIL à NOVERIA DISTRIBUTION.\n\n---\n\nA — MISE EN DEMEURE DU 27 JANVIER 2025\n\nALTIMEO CONSEIL SARL\n14 rue Frédéric Mistral — 69100 Villeurbanne\nRCS Lyon 891 204 331\n\nNOVERIA DISTRIBUTION SAS\nÀ l'attention de Madame Claire FONTAINE, directrice générale\n8 quai Rambaud\n69002 Lyon\n\nLettre recommandée avec accusé de réception n° 1A 987 654 3210 9\n\nVilleurbanne, le 27 janvier 2025\n\nObjet : mise en demeure de payer la facture n° F-2024-0731\n\nMadame la Directrice générale,\n\nNous revenons vers vous au sujet de notre facture n° F-2024-0731 du 21 novembre 2024, d'un montant de 71 040 euros TTC, venue à échéance le 21 décembre 2024 et demeurée impayée à ce jour.\n\nVotre courrier du 9 décembre 2024 appelle de notre part les observations suivantes.\n\nSur la prétendue suspension de la recette. Les réserves R-01, R-03 et l'ensemble des réserves non bloquantes ont été levées dans le délai contractuel. Les réserves R-02 et R-04 ne présentent pas, selon nous, le caractère bloquant qui leur a été prêté : le module est exploité par vos équipes depuis novembre 2024, ce qui suffit à établir qu'il est utilisable. La réserve R-04, au surplus, porte sur une fonctionnalité absente du cahier des charges annexé au contrat.\n\nSur les pénalités de retard. Le retard invoqué procède de l'évolution du besoin que vous avez exprimée au cours des ateliers de juillet et août 2024. Nous vous avions alerté par écrit dès le 11 septembre 2024 sur l'incompatibilité de cette demande avec le calendrier initial. Vous ne sauriez aujourd'hui vous prévaloir d'un retard dont vous êtes à l'origine.\n\nEn conséquence, nous vous mettons en demeure de nous régler, dans un délai de quinze (15) jours à compter de la réception de la présente :\n\nPoste\tMontant\nFacture n° F-2024-0731\t71 040,00 €\nIndemnité forfaitaire pour frais de recouvrement (art. D. 441-5 du code de commerce)\t40,00 €\nTotal réclamé\t71 080,00 €\n\nOutre les pénalités de retard courant depuis le 22 décembre 2024 au taux légal applicable entre professionnels.\n\nÀ défaut de règlement dans ce délai, nous saisirons le Tribunal de commerce de Lyon, compétent en vertu de l'article 16 du contrat, sans nouvel avis.\n\nNous vous prions d'agréer, Madame la Directrice générale, l'expression de nos salutations distinguées.\n\nSamuel FERRAND\nGérant\nALTIMEO CONSEIL SARL\n\n---\n\nB — RELANCE DU 14 FÉVRIER 2025\n\nALTIMEO CONSEIL SARL\n14 rue Frédéric Mistral — 69100 Villeurbanne\n\nNOVERIA DISTRIBUTION SAS\n8 quai Rambaud — 69002 Lyon\n\nLettre recommandée avec accusé de réception n° 1A 987 654 3211 6\n\nVilleurbanne, le 14 février 2025\n\nObjet : relance — mise en demeure du 27 janvier 2025 demeurée sans effet\n\nMadame la Directrice générale,\n\nNotre mise en demeure du 27 janvier 2025, dont vous avez accusé réception le 29 janvier 2025, est demeurée sans réponse et sans effet.\n\nLe délai de quinze jours que nous vous avions imparti est expiré depuis le 13 février 2025.\n\nNous vous informons en conséquence que nous confions ce jour le dossier à notre conseil, aux fins d'assignation devant le Tribunal de commerce de Lyon.",
+        "explication": "Le contexte confirme qu'Altimeo Conseil a bien adressé une mise en demeure le 27 janvier 2025 suivie d'une relance le 14 février 2025.",
+        "citation_verifiee": false
+      },
+      "passe_B": {
+        "claim_id": "C-013",
+        "cote_citee": 9,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "MISE EN DEMEURE DU 27 JANVIER 2025",
+        "explication": "Le contexte confirme bien l'envoi d'une mise en demeure à la date du 27 janvier 2025 par la société ALTIMEO CONSEIL.",
+        "citation_verifiee": true
+      }
+    },
+    {
+      "claim_id": "C-014",
+      "cote_citee": 9,
+      "texte": "Face à cette situation, la société ALTIMEO CONSEIL a cru devoir adresser une mise en demeure de payer le 27 janvier 2025, puis une relance le 14 février 2025",
+      "valeur_brute": "14 février 2025",
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-014",
+        "cote_citee": 9,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "La présente pièce regroupe deux courriers successifs adressés par ALTIMEO CONSEIL à NOVERIA DISTRIBUTION. [...] B — RELANCE DU 14 FÉVRIER 2025",
+        "explication": "Le contexte confirme qu'une relance a bien été adressée par ALTIMEO CONSEIL le 14 février 2025.",
+        "citation_verifiee": false
+      },
+      "passe_B": {
+        "claim_id": "C-014",
+        "cote_citee": 9,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "RELANCE DU 14 FÉVRIER 2025",
+        "explication": "Le contexte confirme qu'une relance a bien été adressée le 14 février 2025.",
+        "citation_verifiee": true
+      }
+    },
+    {
+      "claim_id": "C-015",
+      "cote_citee": 1,
+      "texte": "L’article 6 du contrat dispose expressément qu’« aucune facture ne peut être émise avant la signature du procès-verbal de recette du lot correspondant »",
+      "valeur_brute": null,
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-015",
+        "cote_citee": 1,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "Aucune facture ne peut être émise avant la signature du procès-verbal de recette du lot correspondant, sauf accord écrit du Client.",
+        "explication": "Le contexte confirme mot pour mot que l'article 6 du contrat interdit l'émission d'une facture avant la signature du procès-verbal de recette.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-015",
+        "cote_citee": 1,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "Aucune facture ne peut être émise avant la signature du procès-verbal de recette du lot correspondant, sauf accord écrit du Client.",
+        "explication": "Le contexte confirme textuellement qu'aucune facture ne peut être émise avant la signature du procès-verbal de recette.",
+        "citation_verifiee": true
+      }
+    },
+    {
+      "claim_id": "C-016",
+      "cote_citee": 5,
+      "texte": "Or, le procès-verbal du 18 octobre 2024, signé contradictoirement, mentionne quatre réserves bloquantes",
+      "valeur_brute": "18 octobre 2024",
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-016",
+        "cote_citee": 5,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "Les Parties consignent douze (12) réserves, dont quatre (4) qualifiées de bloquantes au sens de l'article 9 du contrat.",
+        "explication": "Le procès-verbal du 18 octobre 2024 mentionne explicitement la présence de quatre réserves bloquantes.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-016",
+        "cote_citee": 5,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "Les Parties consignent douze (12) réserves, dont quatre (4) qualifiées de bloquantes au sens de l'article 9 du contrat.",
+        "explication": "Le procès-verbal du 18 octobre 2024 indique explicitement que quatre réserves sont qualifiées de bloquantes.",
+        "citation_verifiee": true
+      }
+    },
+    {
+      "claim_id": "C-017",
+      "cote_citee": 5,
+      "texte": "Or, le procès-verbal du 18 octobre 2024, signé contradictoirement, mentionne quatre réserves bloquantes",
+      "valeur_brute": "quatre",
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-017",
+        "cote_citee": 5,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "Les Parties consignent douze (12) réserves, dont quatre (4) qualifiées de bloquantes au sens de l'article 9 du contrat.",
+        "explication": "Le procès-verbal de recette du 18 octobre 2024 mentionne explicitement quatre réserves bloquantes.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-017",
+        "cote_citee": 5,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "Les Parties consignent douze (12) réserves, dont quatre (4) qualifiées de bloquantes au sens de l'article 9 du contrat.",
+        "explication": "Le procès-verbal du 18 octobre 2024 indique explicitement la présence de quatre réserves bloquantes.",
+        "citation_verifiee": true
+      }
+    },
+    {
+      "claim_id": "C-018",
+      "cote_citee": 1,
+      "texte": "L’article 9 du contrat précise que « la formulation d’au moins une réserve bloquante suspend la recette du lot, qui n’est réputée acquise qu’après levée de l’intégralité desdites réserves »",
+      "valeur_brute": null,
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-018",
+        "cote_citee": 1,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "La formulation d'au moins une réserve bloquante suspend la recette du lot, qui n'est réputée acquise qu'après levée de l'intégralité desdites réserves.",
+        "explication": "Le contexte confirme mot pour mot que la formulation d'au moins une réserve bloquante suspend la recette du lot jusqu'à sa levée intégrale.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-018",
+        "cote_citee": 1,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "La formulation d'au moins une réserve bloquante suspend la recette du lot, qui n'est réputée acquise qu'après levée de l'intégralité desdites réserves.",
+        "explication": "Le texte du contrat indique textuellement cette règle à l'article 9 concernant les réserves bloquantes.",
+        "citation_verifiee": true
+      }
+    },
+    {
+      "claim_id": "C-019",
+      "cote_citee": 7,
+      "texte": "Il est constant que les réserves R-02 (défaillance de décrémentation des stocks) et R-04 (absence de reprise de l’historique des tarifs) n’ont pas été levées à ce jour",
+      "valeur_brute": null,
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-019",
+        "cote_citee": 7,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "À la date des présentes, les réserves R-02 et R-04 demeurent non levées, ainsi que votre chef de projet l'a lui-même reconnu par courriel du 8 novembre 2024.",
+        "explication": "Le contexte confirme que les réserves R-02 et R-04 n'ont pas été levées.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-019",
+        "cote_citee": 7,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "Non levées : les réserves bloquantes R-02 (décrémentation des stocks sur livraison partielle) et R-04 (historique des tarifs négociés).",
+        "explication": "Le courriel du 8 novembre 2024 confirme explicitement que les réserves R-02 et R-04 n'ont pas été levées.",
+        "citation_verifiee": true
+      }
+    },
+    {
+      "claim_id": "C-020",
+      "cote_citee": 9,
+      "texte": "La société ALTIMEO CONSEIL tente, dans sa mise en demeure du 27 janvier 2025, de minimiser l’impact de ces défaillances en arguant d’une prétendue exploitation par le client",
+      "valeur_brute": "27 janvier 2025",
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-020",
+        "cote_citee": 9,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "Les réserves R-01, R-03 et l'ensemble des réserves non bloquantes ont été levées dans le délai contractuel. Les réserves R-02 et R-04 ne présentent pas, selon nous, le caractère bloquant qui leur a été prêté : le module est exploité par vos équipes depuis novembre 2024, ce qui suffit à établir qu'il est utilisable.",
+        "explication": "Dans sa mise en demeure du 27 janvier 2025, Altimeo Conseil affirme que le module est exploité par le client depuis novembre 2024 pour relativiser l'importance des réserves.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-020",
+        "cote_citee": 9,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "Les réserves R-02 et R-04 ne présentent pas, selon nous, le caractère bloquant qui leur a été prêté : le module est exploité par vos équipes depuis novembre 2024, ce qui suffit à établir qu'il est utilisable.",
+        "explication": "La mise en demeure du 27 janvier 2025 indique bien que le module est exploité par les équipes du client depuis novembre 2024 pour minimiser l'impact des réserves.",
+        "citation_verifiee": true
+      }
+    },
+    {
+      "claim_id": "C-021",
+      "cote_citee": 1,
+      "texte": "L’article 4 du contrat fixe la date de livraison du lot 2 au 18 octobre 2024, en précisant qu’il s’agit d’un « délai de rigueur »",
+      "valeur_brute": "18 octobre 2024",
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-021",
+        "cote_citee": 1,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "Le Prestataire s'engage à livrer chaque lot au plus tard aux dates suivantes : - Lot 1 : le 28 juin 2024 - Lot 2 : le 18 octobre 2024 - Lot 3 : le 31 janvier 2025 Ces dates sont des délais de rigueur.",
+        "explication": "Le contrat stipule explicitement que la date de livraison du lot 2 est fixée au 18 octobre 2024 et qu'il s'agit d'un délai de rigueur.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-021",
+        "cote_citee": 1,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "- Lot 2 : le 18 octobre 2024",
+        "explication": "Le contexte confirme expressément que la date de livraison du lot 2 est fixée au 18 octobre 2024 et qu'il s'agit d'un délai de rigueur.",
+        "citation_verifiee": true
+      }
+    },
+    {
+      "claim_id": "C-022",
+      "cote_citee": 1,
+      "texte": "L’article 8 prévoit, en cas de dépassement, une pénalité de 0,5 % du montant HT du lot par semaine calendaire entamée, dans la limite de 10 %",
+      "valeur_brute": "0,5 %",
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-022",
+        "cote_citee": 1,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "En cas de dépassement de l'une des dates de livraison stipulées à l'article 4, le Prestataire encourt de plein droit, et sans mise en demeure préalable, une pénalité égale à 0,5 % du montant hors taxes du lot concerné par semaine calendaire entamée de retard. Le montant total des pénalités applicables à un lot ne peut excéder 10 % du montant hors taxes de ce lot.",
+        "explication": "Le contexte confirme expressément le taux de pénalité de 0,5 % du montant HT du lot par semaine calendaire et la limite de 10 %.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-022",
+        "cote_citee": 1,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "En cas de dépassement de l'une des dates de livraison stipulées à l'article 4, le Prestataire encourt de plein droit, et sans mise en demeure préalable, une pénalité égale à 0,5 % du montant hors taxes du lot concerné par semaine calendaire entamée de retard. Le montant total des pénalités applicables à un lot ne peut excéder 10 % du montant hors taxes de ce lot.",
+        "explication": "Le contexte confirme expressément le taux de pénalité de 0,5 % du montant HT par semaine calendaire et la limite de 10 %.",
+        "citation_verifiee": true
+      }
+    },
+    {
+      "claim_id": "C-023",
+      "cote_citee": 1,
+      "texte": "L’article 8 prévoit, en cas de dépassement, une pénalité de 0,5 % du montant HT du lot par semaine calendaire entamée, dans la limite de 10 %",
+      "valeur_brute": "10 %",
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-023",
+        "cote_citee": 1,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "Le montant total des pénalités applicables à un lot ne peut excéder 10 % du montant hors taxes de ce lot.",
+        "explication": "Le contexte confirme expressément que le montant total des pénalités est plafonné à 10 % du montant hors taxes du lot.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-023",
+        "cote_citee": 1,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "Le montant total des pénalités applicables à un lot ne peut excéder 10 % du montant hors taxes de ce lot.",
+        "explication": "Le contrat prévoit expressément une limite de 10 % du montant HT du lot pour les pénalités de retard.",
+        "citation_verifiee": true
+      }
+    },
+    {
+      "claim_id": "C-024",
+      "cote_citee": 8,
+      "texte": "La société ALTIMEO CONSEIL n’a pas respecté cette échéance. Au 9 décembre 2024, le retard était déjà de huit semaines entamées, générant des pénalités à hauteur de 2 368 €",
+      "valeur_brute": "2 368 €",
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-024",
+        "cote_citee": 8,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "Pénalités dues à ce jour : 2 368,00 €",
+        "explication": "Le contexte confirme le montant des pénalités dues au 9 décembre 2024 suite aux huit semaines de retard.",
+        "citation_verifiee": false
+      },
+      "passe_B": {
+        "claim_id": "C-024",
+        "cote_citee": 8,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "Pénalités dues à ce jour : 2 368,00 €",
+        "explication": "Le contexte confirme explicitement que le montant des pénalités de retard s'élève à 2 368 euros au 9 décembre 2024.",
+        "citation_verifiee": false
+      }
+    },
+    {
+      "claim_id": "C-025",
+      "cote_citee": 8,
+      "texte": "La société ALTIMEO CONSEIL n’a pas respecté cette échéance. Au 9 décembre 2024, le retard était déjà de huit semaines entamées, générant des pénalités à hauteur de 2 368 €",
+      "valeur_brute": "9 décembre 2024",
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-025",
+        "cote_citee": 8,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "Retard au 9 décembre 2024 | 52 jours, soit 8 semaines entamées | Pénalités dues à ce jour | 2 368,00 €",
+        "explication": "Le contexte confirme qu'au 9 décembre 2024, le retard cumulé atteignait 8 semaines entamées, ce qui correspondait à un montant de pénalités de 2 368 €.",
+        "citation_verifiee": false
+      },
+      "passe_B": {
+        "claim_id": "C-025",
+        "cote_citee": 8,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "Retard au 9 décembre 2024 | 52 jours, soit 8 semaines entamées | Pénalités dues à ce jour | 2 368,00 €",
+        "explication": "Le document confirme explicitement qu'au 9 décembre 2024, le retard était de huit semaines entamées et que les pénalités s'élevaient à 2 368 euros.",
+        "citation_verifiee": false
+      }
+    },
+    {
+      "claim_id": "C-026",
+      "cote_citee": 8,
+      "texte": "La société ALTIMEO CONSEIL n’a pas respecté cette échéance. Au 9 décembre 2024, le retard était déjà de huit semaines entamées, générant des pénalités à hauteur de 2 368 €",
+      "valeur_brute": "huit",
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-026",
+        "cote_citee": 8,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "| Retard au 9 décembre 2024 | 52 jours, soit 8 semaines entamées |",
+        "explication": "Le contexte confirme que le retard constaté au 9 décembre 2024 s'élève à 52 jours, soit huit semaines entamées, correspondant aux pénalités de 2 368 € calculées.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-026",
+        "cote_citee": 8,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "Retard au 9 décembre 2024 | 52 jours, soit 8 semaines entamées |",
+        "explication": "Le document indique explicitement qu'au 9 décembre 2024, le retard était de 52 jours, soit 8 semaines entamées, pour un montant de pénalités de 2 368,00 €.",
+        "citation_verifiee": true
+      }
+    },
+    {
+      "claim_id": "C-027",
+      "cote_citee": 1,
+      "texte": "Ces pénalités sont, aux termes du contrat, « déductibles de plein droit des sommes dues au Prestataire »",
+      "valeur_brute": null,
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-027",
+        "cote_citee": 1,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "Les pénalités sont déductibles de plein droit des sommes dues au Prestataire.",
+        "explication": "Le contrat stipule expressément que les pénalités de retard sont déductibles de plein droit des sommes dues au Prestataire.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-027",
+        "cote_citee": 1,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "Les pénalités sont déductibles de plein droit des sommes dues au Prestataire.",
+        "explication": "Le contrat prévoit explicitement que les pénalités de retard sont déductibles de plein droit des sommes dues au Prestataire.",
+        "citation_verifiee": true
+      }
+    },
+    {
+      "claim_id": "C-028",
+      "cote_citee": 7,
+      "texte": "La société ALTIMEO CONSEIL tente de justifier ce retard par une demande d’évolution du périmètre (module CRM). Toutefois, cette demande n’a jamais été acceptée par NOVERIA DISTRIBUTION. Bien au contraire, le client a rappelé, dès le 29 août 2024, que les échanges en atelier ne valaient pas commande",
+      "valeur_brute": "29 août 2024",
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-028",
+        "cote_citee": 7,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "Je précise, pour éviter toute ambiguïté ultérieure, que ce sujet ne fait pas partie du périmètre contractuel et qu'aucune décision ne pourra être prise sur ce point autrement que par un avenant signé par notre direction générale. Nos échanges en atelier ne valent pas commande.",
+        "explication": "Le contexte confirme que le client a indiqué dès le 29 août 2024 que les échanges en atelier sur le module CRM ne valaient pas commande.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-028",
+        "cote_citee": 7,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "Je précise, pour éviter toute ambiguïté ultérieure, que ce sujet ne fait pas partie du périmètre contractuel et qu'aucune décision ne pourra être prise sur ce point autrement que par un avenant signé par notre direction générale. Nos échanges en atelier ne valent pas commande.",
+        "explication": "Le contexte confirme que Sophie Mercier a rappelé dès le 29 août 2024 que les ateliers ne valaient pas commande et que ce sujet était hors périmètre.",
+        "citation_verifiee": true
+      }
+    },
+    {
+      "claim_id": "C-029",
+      "cote_citee": 7,
+      "texte": "et a formellement refusé le projet d’avenant le 20 septembre 2024",
+      "valeur_brute": "20 septembre 2024",
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-029",
+        "cote_citee": 7,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "Notre direction générale a examiné votre projet d'avenant lors du comité de pilotage du 17 septembre. Nous n'y donnerons pas suite.",
+        "explication": "Le contexte confirme que la société Noveria Distribution a rejeté le projet d'avenant le 20 septembre 2024 par courriel.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-029",
+        "cote_citee": 7,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "Notre direction générale a examiné votre projet d'avenant lors du comité de pilotage du 17 septembre. Nous n'y donnerons pas suite.",
+        "explication": "Le message envoyé le 20 septembre 2024 confirme formellement le refus du projet d'avenant par la direction générale.",
+        "citation_verifiee": true
+      }
+    },
+    {
+      "claim_id": "C-030",
+      "cote_citee": 1,
+      "texte": "La société ALTIMEO CONSEIL cherche à s’affranchir des règles de forme imposées par l’article 12 du contrat, lequel dispose que « toute modification du périmètre, du calendrier ou du prix stipulés aux présentes doit faire l’objet d’un avenant écrit, signé des deux Parties »",
+      "valeur_brute": "deux",
+      "classement": "misgrounded",
+      "passe_A": {
+        "claim_id": "C-030",
+        "cote_citee": 1,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "Toute modification du périmètre, du calendrier ou du prix stipulés aux présentes doit faire l'objet d'un avenant écrit, signé des deux Parties.",
+        "explication": "Le contexte confirme les termes de l'article 12 du contrat concernant les conditions de modification du périmètre, du calendrier ou du prix.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-030",
+        "cote_citee": 1,
+        "passe": "B",
+        "verdict": "absent",
+        "citation_justificative": "",
+        "explication": "Le contexte ne mentionne pas que la société Altimeo Conseil cherche à s'affranchir des règles de forme de l'article 12.",
+        "citation_verifiee": false
+      }
+    },
+    {
+      "claim_id": "C-031",
+      "cote_citee": 1,
+      "texte": "Il est stipulé que « les échanges de courriels, comptes rendus de comité de pilotage ou accords verbaux ne valent pas avenant »",
+      "valeur_brute": null,
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-031",
+        "cote_citee": 1,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "Les échanges de courriels, comptes rendus de comité de pilotage ou accords verbaux ne valent pas avenant.",
+        "explication": "Le contexte confirme expressément dans l'article 12 du contrat que les échanges de courriels, comptes rendus de comité de pilotage ou accords verbaux ne valent pas avenant.",
+        "citation_verifiee": true
+      },
+      "passe_B": {
+        "claim_id": "C-031",
+        "cote_citee": 1,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "Les échanges de courriels, comptes rendus de comité de pilotage ou accords verbaux ne valent pas avenant.",
+        "explication": "Le contrat stipule expressément dans son article 12 que les échanges de courriels, comptes rendus de comité de pilotage ou accords verbaux ne valent pas avenant.",
+        "citation_verifiee": true
+      }
+    },
+    {
+      "claim_id": "C-032",
+      "cote_citee": 3,
+      "texte": "Le projet d’avenant n° 1, version 0.3, est demeuré à l’état de projet non signé",
+      "valeur_brute": null,
+      "classement": "correctement_cite",
+      "passe_A": {
+        "claim_id": "C-032",
+        "cote_citee": 3,
+        "passe": "A",
+        "verdict": "etaye",
+        "citation_justificative": "Version 0.3 — diffusé pour discussion au comité de pilotage du 17 septembre 2024. Ce document n'engage aucune des Parties tant qu'il n'a pas été signé.",
+        "explication": "Le contexte confirme que le projet d'avenant n° 1 est resté à l'état de document de travail non signé.",
+        "citation_verifiee": false
+      },
+      "passe_B": {
+        "claim_id": "C-032",
+        "cote_citee": 3,
+        "passe": "B",
+        "verdict": "etaye",
+        "citation_justificative": "Ce document n'engage aucune des Parties tant qu'il n'a pas été signé.",
+        "explication": "Le document est expressément qualifié de projet non signé qui n'engage aucune des parties.",
+        "citation_verifiee": true
+      }
+    }
+  ]
+}

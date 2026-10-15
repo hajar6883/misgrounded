@@ -1,0 +1,28 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    env:
+      # La suite tourne sans cle API : toutes les reponses du modele sont dans
+      # cache/, commite. C'est la garantie qu'un relecteur peut tout rejouer.
+      CONTROLE_PIECES_OFFLINE: "1"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Installer les dépendances
+        run: python -m pip install --quiet pytest
+
+      - name: Lancer les tests
+        run: python -m pytest -q
+
+      - name: Rejouer le pipeline hors ligne
+        run: PYTHONPATH=src python -m controle_pieces run

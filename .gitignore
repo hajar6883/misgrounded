@@ -1,0 +1,25 @@
+# Secrets : jamais dans le depot. Seul .env.example est commite.
+.env
+
+# Notes de travail personnelles.
+prive/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# macOS
+.DS_Store
+
+# NOTE : cache/ et results/ sont volontairement COMMITES.
+# C'est ce qui permet a un relecteur de relancer le projet sans cle API.
+
+# Outillage local (graphify/brain) : hors du depot.
+.brain/
+
+# Journal de run : bruyant et regenerable. Les resultats JSON, eux, sont commites.
+results/*.log

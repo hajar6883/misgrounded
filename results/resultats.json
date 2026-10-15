@@ -1,0 +1,273 @@
+{
+  "dossier_piege": {
+    "acte": "conclusions_piegees.md",
+    "affirmations": 34,
+    "confirmees_par_les_regles": 14,
+    "alertes": 13,
+    "alertes_par_source": {
+      "deterministe": 7,
+      "juge": 6
+    },
+    "alertes_par_classement": {
+      "contredit": 7,
+      "non_etaye": 5,
+      "misgrounded": 1
+    },
+    "juge_a_tourne": true,
+    "detail": [
+      {
+        "claim_id": "C-004",
+        "cote_citee": 7,
+        "valeur_brute": "30 juin 2024",
+        "source": "deterministe",
+        "classement": "contredit",
+        "erreur_plantee": "E-07"
+      },
+      {
+        "claim_id": "C-005",
+        "cote_citee": 2,
+        "valeur_brute": "44 400 € HT",
+        "source": "deterministe",
+        "classement": "contredit",
+        "erreur_plantee": "E-03"
+      },
+      {
+        "claim_id": "C-006",
+        "cote_citee": 1,
+        "valeur_brute": "29 novembre 2024",
+        "source": "deterministe",
+        "classement": "contredit",
+        "erreur_plantee": "E-04"
+      },
+      {
+        "claim_id": "C-007",
+        "cote_citee": 5,
+        "valeur_brute": "quinze",
+        "source": "juge",
+        "classement": "non_etaye",
+        "erreur_plantee": "E-06"
+      },
+      {
+        "claim_id": "C-008",
+        "cote_citee": 5,
+        "valeur_brute": "six",
+        "source": "juge",
+        "classement": "non_etaye",
+        "erreur_plantee": "E-06"
+      },
+      {
+        "claim_id": "C-009",
+        "cote_citee": 6,
+        "valeur_brute": "59 200 € TTC",
+        "source": "deterministe",
+        "classement": "contredit",
+        "erreur_plantee": "E-02"
+      },
+      {
+        "claim_id": "C-015",
+        "cote_citee": 7,
+        "valeur_brute": "12 décembre 2024",
+        "source": "deterministe",
+        "classement": "contredit",
+        "erreur_plantee": "E-11"
+      },
+      {
+        "claim_id": "C-020",
+        "cote_citee": 7,
+        "valeur_brute": null,
+        "source": "juge",
+        "classement": "non_etaye",
+        "erreur_plantee": "E-10"
+      },
+      {
+        "claim_id": "C-024",
+        "cote_citee": 1,
+        "valeur_brute": "15 %",
+        "source": "deterministe",
+        "classement": "contredit",
+        "erreur_plantee": "E-09"
+      },
+      {
+        "claim_id": "C-025",
+        "cote_citee": 8,
+        "valeur_brute": "4 440 €",
+        "source": "deterministe",
+        "classement": "contredit",
+        "erreur_plantee": "E-01"
+      },
+      {
+        "claim_id": "C-027",
+        "cote_citee": 8,
+        "valeur_brute": "huit",
+        "source": "juge",
+        "classement": "misgrounded",
+        "erreur_plantee": "E-01"
+      },
+      {
+        "claim_id": "C-031",
+        "cote_citee": 1,
+        "valeur_brute": "deux",
+        "source": "juge",
+        "classement": "non_etaye",
+        "erreur_plantee": null
+      },
+      {
+        "claim_id": "C-034",
+        "cote_citee": 3,
+        "valeur_brute": "deux",
+        "source": "juge",
+        "classement": "non_etaye",
+        "erreur_plantee": "E-05"
+      }
+    ],
+    "double_passe": {
+      "classements": {
+        "correctement_cite": 16,
+        "non_etaye": 16,
+        "misgrounded": 2
+      },
+      "taux_misgrounded": 0.0588,
+      "taux_non_etaye": 0.4706,
+      "incoherences_du_juge": 0
+    },
+    "erreurs_plantees": 12,
+    "erreurs_detectees": 10,
+    "erreurs_manquees": [
+      "E-08",
+      "E-12"
+    ],
+    "rappel_verificateur": 0.8333,
+    "fausses_alertes": 1,
+    "taux_fausses_alertes": 0.0455
+  },
+  "acte_genere": {
+    "acte": "conclusions_llm.md",
+    "affirmations": 32,
+    "confirmees_par_les_regles": 19,
+    "alertes": 1,
+    "alertes_par_source": {
+      "juge": 1
+    },
+    "alertes_par_classement": {
+      "misgrounded": 1
+    },
+    "juge_a_tourne": true,
+    "detail": [
+      {
+        "claim_id": "C-030",
+        "cote_citee": 1,
+        "valeur_brute": "deux",
+        "source": "juge",
+        "classement": "misgrounded",
+        "erreur_plantee": null
+      }
+    ],
+    "double_passe": {
+      "classements": {
+        "correctement_cite": 30,
+        "misgrounded": 2
+      },
+      "taux_misgrounded": 0.0625,
+      "taux_non_etaye": 0.0,
+      "incoherences_du_juge": 0
+    },
+    "erreurs_naturelles_candidates": 1,
+    "note": "Aucune verite terrain affirmation par affirmation sur cet acte : les alertes sont des erreurs naturelles candidates, a relire, et non des fausses alertes."
+  },
+  "renumerotation": {
+    "piece_inseree": {
+      "cote": 3,
+      "doc_id": "D-CST-011",
+      "titre": "Constat d'huissier du 25/11/2024 sur l'état du module stocks"
+    },
+    "citations_dans_l_acte": 25,
+    "naif": {
+      "citations_cassees": 14,
+      "taux": 0.56,
+      "details": [
+        {
+          "cote_citee": 7,
+          "doc_attendu": "D-MEL-007",
+          "doc_obtenu": "D-FAC-006"
+        },
+        {
+          "cote_citee": 4,
+          "doc_attendu": "D-FAC-004",
+          "doc_obtenu": "D-AVE-003"
+        },
+        {
+          "cote_citee": 7,
+          "doc_attendu": "D-MEL-007",
+          "doc_obtenu": "D-FAC-006"
+        },
+        {
+          "cote_citee": 5,
+          "doc_attendu": "D-PVR-005",
+          "doc_obtenu": "D-FAC-004"
+        },
+        {
+          "cote_citee": 6,
+          "doc_attendu": "D-FAC-006",
+          "doc_obtenu": "D-PVR-005"
+        },
+        {
+          "cote_citee": 7,
+          "doc_attendu": "D-MEL-007",
+          "doc_obtenu": "D-FAC-006"
+        },
+        {
+          "cote_citee": 9,
+          "doc_attendu": "D-MED-009",
+          "doc_obtenu": "D-CTS-008"
+        },
+        {
+          "cote_citee": 5,
+          "doc_attendu": "D-PVR-005",
+          "doc_obtenu": "D-FAC-004"
+        },
+        {
+          "cote_citee": 7,
+          "doc_attendu": "D-MEL-007",
+          "doc_obtenu": "D-FAC-006"
+        },
+        {
+          "cote_citee": 9,
+          "doc_attendu": "D-MED-009",
+          "doc_obtenu": "D-CTS-008"
+        },
+        {
+          "cote_citee": 8,
+          "doc_attendu": "D-CTS-008",
+          "doc_obtenu": "D-MEL-007"
+        },
+        {
+          "cote_citee": 7,
+          "doc_attendu": "D-MEL-007",
+          "doc_obtenu": "D-FAC-006"
+        },
+        {
+          "cote_citee": 7,
+          "doc_attendu": "D-MEL-007",
+          "doc_obtenu": "D-FAC-006"
+        },
+        {
+          "cote_citee": 3,
+          "doc_attendu": "D-AVE-003",
+          "doc_obtenu": "D-CST-011"
+        }
+      ]
+    },
+    "identifiant_stable": {
+      "citations_cassees": 0,
+      "taux": 0.0
+    }
+  },
+  "resumes_du_bordereau": {
+    "resumes": 10,
+    "valeurs_chiffrees": 38,
+    "confirmees": 37,
+    "contredites": 0,
+    "indecidables": 1,
+    "taux_confirme": 0.9737
+  }
+}
