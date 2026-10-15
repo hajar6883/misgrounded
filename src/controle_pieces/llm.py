@@ -14,11 +14,15 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from typing import Any
 
-from dotenv import load_dotenv
-
 from .chemins import CACHE, RACINE
 
-load_dotenv(RACINE / ".env")
+# .env ne sert qu'a la cle API. Hors ligne (CI, relecteur), dotenv est absent.
+try:
+    from dotenv import load_dotenv
+except ImportError:
+    pass
+else:
+    load_dotenv(RACINE / ".env")
 
 # Erreurs de transport. Le nom de la classe suffit : httpx n'est qu'une
 # dependance transitive du SDK.
