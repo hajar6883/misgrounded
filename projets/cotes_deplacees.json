@@ -1,0 +1,119 @@
+{
+  "acte_source": "conclusions_llm.md",
+  "commentaire": "Faits vrais deplaces sous une mauvaise cote. Seule la citation change : le texte juge en passe A est identique a l'acte sain.",
+  "nombre": 14,
+  "deplacements": [
+    {
+      "erreur_id": "M-01",
+      "cote_correcte": 1,
+      "cote_leurre": 2,
+      "avant": "obligation de résultat (pièce n° 1, article 1)",
+      "raison": "le bon de commande precede le contrat, mais ne le stipule pas",
+      "apres": "obligation de résultat (pièce n° 2)"
+    },
+    {
+      "erreur_id": "M-02",
+      "cote_correcte": 1,
+      "cote_leurre": 9,
+      "avant": "AXELIS (pièce n° 1)",
+      "raison": "la mise en demeure vise le contrat, sans sa date ni son objet",
+      "apres": "AXELIS (pièce n° 9)"
+    },
+    {
+      "erreur_id": "M-03",
+      "cote_correcte": 1,
+      "cote_leurre": 5,
+      "avant": "« délais de rigueur » (pièce n° 1, article 4)",
+      "raison": "le PV de recette parle des delais, pas de leur qualification",
+      "apres": "« délais de rigueur » (pièce n° 5)"
+    },
+    {
+      "erreur_id": "M-04",
+      "cote_correcte": 6,
+      "cote_leurre": 4,
+      "avant": "59 200 € HT (pièce n° 6)",
+      "raison": "confusion entre les deux factures",
+      "apres": "59 200 € HT (pièce n° 4)"
+    },
+    {
+      "erreur_id": "M-05",
+      "cote_correcte": 9,
+      "cote_leurre": 8,
+      "avant": "14 février 2025 (pièce n° 9)",
+      "raison": "le courrier de contestation precede la relance",
+      "apres": "14 février 2025 (pièce n° 8)"
+    },
+    {
+      "erreur_id": "M-06",
+      "cote_correcte": 5,
+      "cote_leurre": 6,
+      "avant": "quatre réserves bloquantes (pièce n° 5)",
+      "raison": "la facture du lot 2 suit le PV, sans reprendre les reserves",
+      "apres": "quatre réserves bloquantes (pièce n° 6)"
+    },
+    {
+      "erreur_id": "M-07",
+      "cote_correcte": 1,
+      "cote_leurre": 4,
+      "avant": "lot correspondant » (pièce n° 1)",
+      "raison": "la clause est citee sous la facture qu'elle encadre",
+      "apres": "lot correspondant » (pièce n° 4)"
+    },
+    {
+      "erreur_id": "M-08",
+      "cote_correcte": 7,
+      "cote_leurre": 6,
+      "avant": "n’ont pas été levées à ce jour (pièce n° 7, message 6)",
+      "raison": "la facture du lot 2 est contemporaine du courriel",
+      "apres": "n’ont pas été levées à ce jour (pièce n° 6)"
+    },
+    {
+      "erreur_id": "M-09",
+      "cote_correcte": 8,
+      "cote_leurre": 6,
+      "avant": "2 368 € (pièce n° 8)",
+      "raison": "les penalites portent sur le lot 2, que cette facture concerne",
+      "apres": "2 368 € (pièce n° 6)"
+    },
+    {
+      "erreur_id": "M-10",
+      "cote_correcte": 1,
+      "cote_leurre": 9,
+      "avant": "dues au Prestataire » (pièce n° 1, article 8)",
+      "raison": "la mise en demeure evoque les penalites, pas la clause",
+      "apres": "dues au Prestataire » (pièce n° 9)"
+    },
+    {
+      "erreur_id": "M-11",
+      "cote_correcte": 7,
+      "cote_leurre": 3,
+      "avant": "ne valaient pas commande (pièce n° 7, message 3)",
+      "raison": "le projet d'avenant evoque les ateliers, pas le rappel du client",
+      "apres": "ne valaient pas commande (pièce n° 3)"
+    },
+    {
+      "erreur_id": "M-12",
+      "cote_correcte": 7,
+      "cote_leurre": 3,
+      "avant": "le 20 septembre 2024 (pièce n° 7, message 5)",
+      "raison": "le refus porte sur l'avenant, mais n'y figure pas",
+      "apres": "le 20 septembre 2024 (pièce n° 3)"
+    },
+    {
+      "erreur_id": "M-13",
+      "cote_correcte": 3,
+      "cote_leurre": 1,
+      "avant": "projet non signé (pièce n° 3)",
+      "raison": "le contrat prevoit l'avenant, mais ne dit rien de celui-ci",
+      "apres": "projet non signé (pièce n° 1)"
+    },
+    {
+      "erreur_id": "M-14",
+      "cote_correcte": 1,
+      "cote_leurre": 9,
+      "avant": "ne valent pas avenant » (pièce n° 1, article 12)",
+      "raison": "la mise en demeure ne cite pas l'article 12",
+      "apres": "ne valent pas avenant » (pièce n° 9)"
+    }
+  ]
+}

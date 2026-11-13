@@ -231,7 +231,7 @@ def verifier_ancrages(acte: str) -> None:
         )
 
 
-def _appliquer(acte: str) -> tuple[str, dict[str, tuple[int, int]]]:
+def _appliquer(acte: str, erreurs=ERREURS) -> tuple[str, dict[str, tuple[int, int]]]:
     """Applique les substitutions en suivant ou chacune atterrit.
 
     Les positions sont la seule facon exacte de rattacher une alerte a son
@@ -241,7 +241,7 @@ def _appliquer(acte: str) -> tuple[str, dict[str, tuple[int, int]]]:
     """
     piege = acte
     spans: dict[str, tuple[int, int]] = {}
-    for erreur in ERREURS:
+    for erreur in erreurs:
         i = piege.index(erreur.avant)
         piege = piege[:i] + erreur.apres + piege[i + len(erreur.avant) :]
         decalage = len(erreur.apres) - len(erreur.avant)
