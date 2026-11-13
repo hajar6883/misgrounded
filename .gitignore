@@ -1,7 +1,6 @@
-# Secrets : jamais dans le depot. Seul .env.example est commite.
 .env
 
-# Notes de travail personnelles.
+# private notes
 prive/
 
 # Python
