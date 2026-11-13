@@ -24,6 +24,7 @@ def test_le_rapport_tourne_hors_ligne(rapport):
     assert set(rapport) == {
         "dossier_piege",
         "acte_genere",
+        "mauvaises_cotes",
         "renumerotation",
         "resumes_du_bordereau",
     }

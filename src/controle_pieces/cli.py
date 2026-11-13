@@ -10,8 +10,8 @@ import argparse
 import json
 import sys
 
-from . import judge, piegeage, redaction, report, resumes
-from .chemins import ACTE_LLM, ACTE_PIEGE, RESULTATS
+from . import judge, mauvaises_cotes, piegeage, redaction, report, resumes
+from .chemins import ACTE_COTES, ACTE_LLM, ACTE_PIEGE, RESULTATS
 from .extract import extraire
 
 
@@ -51,6 +51,12 @@ def _cmd_piege(args) -> int:
     return 0
 
 
+def _cmd_cotes(args) -> int:
+    _, deplacements = mauvaises_cotes.construire()
+    print(f"{ACTE_COTES} — {len(deplacements)} cotes déplacées")
+    return 0
+
+
 def _cmd_resumes(args) -> int:
     generes = resumes.generer_tous(trace=True)
     controles = resumes.controler_tous()
@@ -61,7 +67,7 @@ def _cmd_resumes(args) -> int:
 
 def _cmd_juge(args) -> int:
     """La double passe. Seule sous-commande vraiment coûteuse."""
-    cibles = [("piege", ACTE_PIEGE), ("genere", ACTE_LLM)]
+    cibles = [("piege", ACTE_PIEGE), ("genere", ACTE_LLM), ("cotes", ACTE_COTES)]
     if args.acte:
         cibles = [c for c in cibles if c[0] == args.acte]
 
@@ -124,12 +130,15 @@ def construire_parseur() -> argparse.ArgumentParser:
     sous.add_parser("piege", help="construit l'acte piégé (hors ligne)").set_defaults(
         fonction=_cmd_piege
     )
+    sous.add_parser("cotes", help="construit l'acte aux cotes déplacées (hors ligne)").set_defaults(
+        fonction=_cmd_cotes
+    )
     sous.add_parser("resumes", help="génère et vérifie les résumés").set_defaults(
         fonction=_cmd_resumes
     )
 
     p = sous.add_parser("juge", help="double passe A/B (appelle le modèle)")
-    p.add_argument("--acte", choices=("piege", "genere"), help="n'en traiter qu'un")
+    p.add_argument("--acte", choices=("piege", "genere", "cotes"), help="n'en traiter qu'un")
     p.add_argument("--limite", type=int, help="ne juger que les N premières")
     p.set_defaults(fonction=_cmd_juge)
 

@@ -10,9 +10,9 @@ import json
 from collections import Counter
 from dataclasses import dataclass
 
-from . import piegeage, renumber, resumes
+from . import mauvaises_cotes, piegeage, renumber, resumes
 from .checks import controler
-from .chemins import ACTE_LLM, ACTE_PIEGE, RESULTATS
+from .chemins import ACTE_COTES, ACTE_LLM, ACTE_PIEGE, RESULTATS
 from .dossier import par_cote
 from .extract import Affirmation, extraire
 from .locate import localiser
@@ -43,8 +43,11 @@ def _verdicts_du_juge(nom: str) -> dict[str, dict]:
     return {c["claim_id"]: c for c in brut["comparaisons"]}
 
 
-def analyser_acte(nom: str, chemin) -> dict:
-    """Passe les trois couches sur un acte et rassemble les alertes."""
+def analyser_acte(nom: str, chemin, rattacher=piegeage.erreur_du_segment) -> dict:
+    """Passe les trois couches sur un acte et rassemble les alertes.
+
+    `rattacher` relie un segment a l'erreur plantee qui y tombe, s'il y en a.
+    """
     pieces = par_cote()
     affirmations: list[Affirmation] = extraire(chemin.read_text(encoding="utf-8"))
     juge = _verdicts_du_juge(nom)
@@ -53,7 +56,7 @@ def analyser_acte(nom: str, chemin) -> dict:
     confirmees_deterministe = 0
 
     for a in affirmations:
-        erreur = piegeage.erreur_du_segment(a.debut, a.fin)
+        erreur = rattacher(a.debut, a.fin)
         ref = erreur.erreur_id if erreur else None
 
         # Couche 1 : controle deterministe des valeurs.
@@ -134,6 +137,62 @@ def rapport_acte_genere() -> dict:
     return base
 
 
+def rapport_mauvaises_cotes() -> dict:
+    """Faits vrais sous une mauvaise cote, compares a l'acte sain, cote par cote.
+
+    Le temoin apparie est l'acte sain : meme affirmation, bonne cote. Une
+    detection n'est attribuable a la cote que si la bonne piece, elle, passe.
+    """
+    base = analyser_acte("cotes", ACTE_COTES, rattacher=mauvaises_cotes.deplacement_du_segment)
+    juge, temoin = _verdicts_du_juge("cotes"), _verdicts_du_juge("genere")
+    affirmations = extraire(ACTE_COTES.read_text(encoding="utf-8"))
+
+    par_deplacement: dict[str, list[str]] = {}
+    for a in affirmations:
+        d = mauvaises_cotes.deplacement_du_segment(a.debut, a.fin)
+        if d:
+            par_deplacement.setdefault(d.erreur_id, []).append(a.claim_id)
+
+    alertees = {a["erreur_plantee"] for a in base["detail"] if a["erreur_plantee"]}
+    regles = {
+        a["erreur_plantee"]
+        for a in base["detail"]
+        if a["erreur_plantee"] and a["source"] in ("deterministe", "localisation")
+    }
+
+    lignes = []
+    for d in mauvaises_cotes.DEPLACEMENTS:
+        ids = par_deplacement[d.erreur_id]
+        ligne = {
+            "erreur_id": d.erreur_id,
+            "cotes": f"{d.cote_correcte} -> {d.cote_leurre}",
+            "affirmations": ids,
+            "regles": d.erreur_id in regles,
+            "pipeline": d.erreur_id in alertees,
+        }
+        if juge and temoin:
+            ligne["passe_A_accepte"] = all(juge[i]["passe_A"]["verdict"] == "etaye" for i in ids)
+            ligne["passe_B_bonne_cote"] = all(temoin[i]["passe_B"]["verdict"] == "etaye" for i in ids)
+            ligne["passe_B_detecte"] = any(juge[i]["passe_B"]["verdict"] != "etaye" for i in ids)
+        lignes.append(ligne)
+
+    def compte(cle: str) -> int:
+        return sum(1 for ligne in lignes if ligne.get(cle))
+
+    return {
+        "acte": ACTE_COTES.name,
+        "deplacements": len(lignes),
+        "juge_a_tourne": bool(juge and temoin),
+        "fidelite_accepte": compte("passe_A_accepte"),
+        "temoin_bonne_cote_etaye": compte("passe_B_bonne_cote"),
+        "double_passe_detecte": compte("passe_B_detecte"),
+        "regles_detectent": compte("regles"),
+        "pipeline_detecte": compte("pipeline"),
+        "fausses_alertes": sum(1 for a in base["detail"] if not a["erreur_plantee"]),
+        "detail": lignes,
+    }
+
+
 def rapport_renumerotation() -> dict:
     return renumber.comparer(ACTE_LLM.read_text(encoding="utf-8"))
 
@@ -155,6 +214,7 @@ def rapport_complet() -> dict:
     return {
         "dossier_piege": rapport_dossier_piege(),
         "acte_genere": rapport_acte_genere(),
+        "mauvaises_cotes": rapport_mauvaises_cotes(),
         "renumerotation": rapport_renumerotation(),
         "resumes_du_bordereau": rapport_resumes(),
     }
@@ -218,6 +278,29 @@ def tableaux(rapport: dict) -> str:
             for k, v in sorted(d["classements"].items()):
                 lignes.append(f"| `{k}` | {v} |")
             lignes.append(f"| **Taux misgrounded** | **{d['taux_misgrounded']:.0%}** |")
+
+    m = rapport["mauvaises_cotes"]
+    lignes += [
+        "",
+        "### 3 bis. Faits vrais sous une mauvaise cote",
+        "",
+        "*Même affirmation, bonne cote (acte sain) contre cote leurre. Seule la citation change.*",
+        "",
+        "| Métrique | Valeur |",
+        "|---|---|",
+        f"| Cotes déplacées | {m['deplacements']} |",
+    ]
+    if m["juge_a_tourne"]:
+        lignes += [
+            f"| Acceptées par la passe A (fidélité) | {m['fidelite_accepte']} / {m['deplacements']} |",
+            f"| Témoin : la bonne pièce étaye le fait | {m['temoin_bonne_cote_etaye']} / {m['deplacements']} |",
+            f"| **Détectées par la passe B** | **{m['double_passe_detecte']} / {m['deplacements']}** |",
+        ]
+    lignes += [
+        f"| Détectées par les règles seules | {m['regles_detectent']} / {m['deplacements']} |",
+        f"| Détectées par le pipeline complet | {m['pipeline_detecte']} / {m['deplacements']} |",
+        f"| Fausses alertes (affirmations non déplacées) | {m['fausses_alertes']} |",
+    ]
 
     lignes += [
         "",
